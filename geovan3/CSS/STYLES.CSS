@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none; 
+   font-family: "Inter", sans-serif;
+   
+}
+/*cor do fundo do site*/
+body{
+    background-color: rgb(255, 255, 255);
+}
+section,footer{
+    padding: 54px 0;
+}
+h3{
+    font-size: 50px;
+}
+p{
+    color: rgb(0, 0, 0);
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.btn{
+    background-color:  rgb(255, 215, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+.btn:hover{
+    background-color:  rgb(255, 250, 150);
+}
+@keyframes animate-outline {
+    from{
+        outline: 15px solid rgb(115, 115, 71);
+    }
+    to{
+        outline: 15px solid rgb(115, 115, 71);
+    }
+}
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: #FAC335;
+    margin: 0 25px;
+    text-shadow: 1px 1px 0 #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+}
+nav ul a:not(.btn):after{
+    content: "";
+    background-color: white;
+    height: 2px;
+    width: 0px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+nav ul a:hover::after{
+    width: 100%;
+}
+/*MENU MOBILE*/
+nav .menu-icon{
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+.banner .banner-text h1{
+    font-size: 70px;
+    color: #FAC335;
+}    
+.banner .banner-text p{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    margin: 30px 0;
+}
+/*a historia*/
+.historia .container{
+    display: flex;
+    align-items: center;
+}   
+.historia .historia-texto{
+    width: 50%;
+    padding: 0 40px;
+}
+.historia .historia-texto h3{
+    font-size: 50px;
+}
+.historia .historia-texto p{
+    margin: 5px 0 10px 0;
+}
+.historia .historia-img{
+    width: 50%;
+}
+.historia .historia-img img{
+    width: 100%;
+}
+/*parte final*/
+.grupo h3{
+    text-align: center;
+}
+.grupo p{
+    text-align: center;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.grupo .card-item{
+    background-color: #FAC335;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+}
+.grupo .card-item img{
+    border-radius: 90px;
+    width: 300px;
+    display: block;
+    margin: 10px auto;
+}
+.grupo .container .cards .btn{
+    background-color: rgb(84, 84, 240);
+    color: white;
+    margin: 15px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+.grupo .container .cards .btn:hover{
+    background-color: rgb(84, 187, 187);
+}
+
+.grupo .card-item .nome-user{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.grupo .card-item .grupo-user{
+    font-size: 15px;
+    padding: 0 15px;
+}
+/*parte final*/
+.footer{
+    background-color: #FAC335;
+    text-align: center;
+}
+/*pagina sobre*/
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-text{
+    width: 50%;
+    padding-right: 40px;
+}
+.sobre .sobre-text p{
+    margin: 18px 0;
+    color: black;
+}
+.sobre .sobre-img{
+    width: 50%;
+}
+
+.sobre .sobre-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+/*fim pagina sobre*/
+
+@media(max-width: 830px){
+/*menu mobile2*/    
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FAC335;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+    }
+    .ul a{
+    margin: 10px 0;
+    font-size: 16px;
+    }
+    nav .menu-icon{
+        display: block;
+    }
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+
+}
+/*imagens ajuste para horizontal*/
+.topicos .container .fotos1{
+    display: flex;
+    flex-direction: column-reverse;
+}
+/*imagens, altura e largura*/
+
+
+/*Pagina de Contato*/
+.contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+/*parte esquerda*/
+.contato-info .left-side{
+    width: 50%;
+    padding: 30px;
+    background-color: #FAC335;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.contato-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contato-info .left-side div i{
+    font-size: 24px;
+    margin-right: 20px;
+}
+.contato-info .left-side p{
+    font-size: 20px;
+}
+/*parte direita*/
+.contato-info .right-side{
+    width: 50%;
+}
+.contato-info .right-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid black;
+    color: black;
+    font-weight: lighter;
+}
+.contato-info .right-side input:focus,
+.contato-info .right-side textarea:focus{
+    border-color: #FAC335;
+}
+.contato-info .right-side textarea{
+    border: 1px solid rgb(3, 3, 3);
+    color: rgb(0, 0, 0);
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+.contato-info .right-side button{
+    border: none;
+}
+/*fim da pagina de Contato*/    
+.bm h2{
+    text-align: center;
+    font-size: 30px;
+}
+.bm h5{
+    text-align: center;
+    font-size: 18px;
+}
+/*começo do teste*/
+/*primeira foto */
+.topicos-img{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.equip1-img{
+    display: flex;
+    justify-content: center;
+}
+.equip1-img img{
+    max-width:700px;
+    max-height:700px;
+    width: 100%;
+    height: 50%;
+}
+
+/*3 fotos do bm*/
+.composicao-bm{
+    text-align: center;
+    border: black;
+    background:black;
+}
+.composicao-bm h4{
+    color: #FAC335;
+    font-size: 30px;
+}
+.composicao-bm h5{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #FAC335;
+}
+.boletim-img img{
+    max-width: 1000px;
+    max-height:1000px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    border: 5px solid #FAC335;
+    margin-bottom: 30px;
+}
+
+ .boletim-img h4{
+    text-align: center;
+    color: #FAC335;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/*finalizando as 3 partes do BM*/
+/*començamdo aqui medição */
+.topicos-text{
+flex-direction: row-reverse;
+display: 100%;
+border: 1;
+}
+
+/*parte de resumo medição */
+.resumo-info .left-side{
+    width: 100%;
+    padding: 30px;
+    background-color: #FAC335;
+    border-radius: px;
+    height: fit-content;
+}
+
+.resumo-info  .left-side div{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin-top: 30px;
+    line-height: 1.3;
+
+}
+
+.resumo-info  .left-side p{
+    font-size: 35px;
+    text-decoration: underline;
+}
+.resumo-info  .left-side img{
+    width: 700px;
+    float: right;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    border-radius: 20%;
+    padding-left: 30px;
+}
+
+
+.resumo-info2 .left-side{
+    width: 100%;
+    padding: 30px;
+    background-color: #FAC335;
+    border-radius: px;
+    height: fit-content;
+}
+.resumo-info2  .left-side div{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin-top: 30px;
+    line-height: 1.3;
+}
+
+.resumo-info2  .left-side p{
+    font-size: 35px;
+    text-decoration: underline;
+}
+.resumo-info2  .left-side img{
+    width: 800px;
+    float: right;
+    margin-left: 393px;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    border-radius: 20%;
+    padding-left: 30px;
+}
+/*fim do resumo de medição*/
+.resumo-info3 .left-side{
+    width: 100%;
+    padding: 30px;
+    background-color: #FAC335;
+    border-radius: px;
+    height: fit-content;
+}
+.resumo-info3  .left-side div{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin-top: 30px;
+    line-height: 1.3;
+}
+
+.resumo-info3  .left-side p{
+    font-size: 35px;
+    text-decoration: underline;
+}
+.resumo-info3  .left-side img{
+    width: 700px;
+    float: right;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    border-radius: 20%;
+    padding-left: 30px;
+}
+/*parte final intens de atenção*/
+.resumo-info4 .left-side{
+    width: 100%;
+    padding: 30px;
+    background-color: #FAC335;
+    border-radius: px;
+    height: fit-content;
+}
+.resumo-info4  .left-side div{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+.resumo-info4  .left-side p{
+    font-size: 35px;
+    text-decoration: underline;
+}
+.resumo-info4  .left-side img{
+    width: 700px;
+    float: right;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    border-radius: 20%;
+    padding-left: 30px;
+}
+/*parte de espelho*/
+.espelho1{
+    color: #FAC335;
+    text-align: center;
+}
+.espelho1 img{
+    width: 700px;
+    height: 200px;
+    float: none;
+    margin-top: 30px;
+}
+.espelho2{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.espelho2 h4{
+    text-align: center;
+    font-size: 25px;
+}
+.espelho2 p{
+    text-align: center;
+    font-size: 20px;
+}
+.espelho-med{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.resumo1{
+    color: #FAC335;
+    text-align: center;
+}
+.resumo1 img{
+    width: 80%;
+    height: 80%;
+    float: none;
+    margin-top: 30px;
+}
+.resumo2{
+    margin-top: 30px;
+}
+.resumo2 h4{
+    text-align: center;
+    font-size: 25px;
+}
+.resumo2 p{
+    text-align: center;
+}
+.resumo-med{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*resumo 2 beto*/
+.resumobt{
+    color: #FAC335;
+    text-align: center;
+}
+.resumobt img{
+    width: 80%;
+    height: 80%;
+    float: none;
+    margin-top: 30px;
+}
+.resumobt2{
+    margin-top: 30px;
+}
+.resumobt h3{
+    font-size: 38px;
+}
+.resumobt2 h4{
+    text-align: center;
+    font-size: 25px;
+}
+.resumobt2 p{
+    text-align: center;
+}
+.resumo-beto{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*final bto*/
+/*bm vale*/
+.resumovl{
+    color: #FAC335;
+    text-align: center;
+}
+.resumovl img{
+    width: 80%;
+    height: 80%;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.resumovl2{
+    margin-top: 30px;
+}
+.resumovl h3{
+    font-size: 38px;
+}
+.resumovl2 h4{
+    text-align: center;
+    font-size: 25px;
+}
+.resumovl2 p{
+    text-align: center;
+}
+.resumo-vale{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*final vale*/
+
+/*parte da caixa do resumo de apontamento com o nome ATENÇAO*/
+.atencao{
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;    
+}
+#btnleiamais{
+    color: rgb(255, 255, 255);
+    background: #FAC335;
+    align-items: center;
+    padding: 30px;
+    margin-top: 0px;
+}
+#mais{
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    background-color: #FAC335;
+}
+#pontos{
+    text-align: center;
+    padding: 50%;
+    display: none;
+}
+/*Final da parte da caixa do resumo de apontamento com o nome ATENÇAO*/
+.atencao2{
+    margin-top: 20px;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;    
+}
+#btnleiamais2{
+    color: rgb(255, 255, 255);
+    background: #FAC335;
+    align-items: center;
+    padding: 30px;
+    margin-top: 0px;
+}
+#mais2{
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    background-color: #FAC335;
+}
+#pontos2{
+    text-align: center;
+    padding: 50%;
+    display: none;
+}
+/*fim do botao atenção*/
+.check1{
+    color: #FAC335;
+    text-align: center;
+}
+.check1 img{
+    width: 30%;
+    height: 30%;  
+    object-fit: contain; 
+}
+.check2{
+    margin-top: 30px;
+}
+.check1 h3{
+    font-size: 38px;
+}
+.check2 h4{
+    text-align: center;
+    font-size: 25px;
+}
+
+.check-list{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contrato1{
+    color: #FAC335;
+    text-align: center;
+}
+.horimetro{
+    text-align: center;
+}
+.horimetro img{
+    height: 500px;
+    width: 900px;
+    text-align: center;
+    margin-top: 20px;
+}
+.horimetro h3{
+    font-size: 38px;
+    color: #FAC335;
+}
+.horimetro h4{
+    font-size: 25px;
+    color: #FAC335;
+}
+.horimetro h5{
+    font-size: 20px;
+    
+}
+.contrato1 a{
+    background-color:  rgb(255, 215, 0);
+    color: rgb(0, 0, 0);
+    padding: 20px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+    margin-top: 20px;
+}
+.contrato1 a:hover{
+    background-color:  rgb(255, 250, 150);
+}
+.contrato2{
+    margin-top: 30px;
+}
+.contrato1 h3{
+    margin-top: 30px;
+    font-size: 38px;
+}
+.contrato2 h4{
+    text-align: center;
+    font-size: 25px;
+}
+
+.contrato-luc{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*final do horimetro e contrato*/
+.prazos1{
+    color: #FAC335;
+    text-align: center;
+}
+.prazos1 img{
+    width: 22%;
+    padding: 10px;
+    margin-right: 10px;
+    height: fit-content;
+    float: right;
+}
+.prazos2{
+    width: 50%;
+}
+.prazos2{
+   float: left 100px;
+
+}
+.prazos1 h3{
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+.prazos2 h4{
+    text-align: center;
+    font-size: 25px;
+}
+.prazos2 p{
+    text-align: center;
+}
+.prazos-luc{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
